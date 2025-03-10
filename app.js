@@ -5,7 +5,7 @@ function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
 
-// Actualiza la lista de amigos en el DOM
+
 function actualizarLista(elemento) {
     let elementoHtml = document.querySelector(elemento);
     elementoHtml.innerHTML = ""; // Limpia la lista antes de actualizar
@@ -29,7 +29,7 @@ function agregarAmigo() {
     limpiarCaja();
 }
 
-// Mezcla los nombres usando el algoritmo Fisher-Yates
+// Mezcla los nombres
 function mezclarNombres(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -52,7 +52,7 @@ function sortearAmigo() {
         asignaciones = [...nombresIngresados]; // Copia del array original
         mezclarNombres(asignaciones);
 
-        esValido = true; // Suponemos que es válido
+        esValido = true; 
         for (let i = 0; i < nombresIngresados.length; i++) {
             if (nombresIngresados[i] === asignaciones[i]) {
                 esValido = false; // Error, volvemos a mezclar
@@ -71,7 +71,7 @@ function sortearAmigo() {
     return resultados;
 }
 
-// Publica los resultados en el DOM
+// Publica los resultados
 function publicarResultado(elemento, resultados) {
     let elementoHtml = document.querySelector(elemento);
     elementoHtml.innerHTML = ""; // Limpia el contenido antes de actualizar
